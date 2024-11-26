@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Transfer & Tranportes Edson Santelices</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="title">
+            <ul>
+                <li>
+                    <h1>Transfer & Tranportes Edson Santelices</h1>
+                </li>
+                <li>
+                    <a class="wsp" target="_blank" href="https://wa.me/962517890?text=Hola,%20te%20contacto%20para%20...">
+                        <i class="bi bi-whatsapp"> (+569) 62517890</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav>
+            <ul class="nav_menu">
+                <li>Quienes Somos</li>
+                <li>Valores</li>
+                <li>Personas | Empresas | Cliente Convenio</li>
+                <li><a id="open_modal" class="open_modal" href="#">Terminos de Servicio</a></li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article class="galeria_cont">
+            <div class="galeria">
+                <div class="organiza_viaje">
+                    <h2>Agenda Aqui</h2>                    
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <article class="who_cont">
+            <div class="who">
+                <h2>QUIENES SOMOS</h2>
+                <p>Somos Transfer y Transportes Edson Santelices constituida como empresa con rut 77.496963-2 con domicilio en la comuna de Conchalí, con una trayectoria de más de 5 años a la fecha.</p>
+                <p>Nuestra princilpal característica es dar cumplimiento con el servicio de transporte de forma puntual, eficiente y siempre dando lo mejor de nosotros.
+                    Actualmente trabajamos con algunas empresas a las cuales podemos dar factura exenta de IVA  para que estás puedan rendir gastos si es requerida.</p>
+                <p>Respecto a los tipos de servicios, somos solicitados por lo general para brindar transporte para eventos, matrimonios, viajes especiales , transfer o traslados al aeropuerto, viajes XL ( hasta 8 personas ), transporte de cargas menores ( con dimensiones de hasta 1 metro que sea capaz de mover un conductor )
+                    Al agendar nos sentiremos muy afortunados de brindarle nuestro servicio.</p>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <div class="foot-cont">
+            <p>Siguenos en Instagram:</p>
+            <p><a class="insta" target="_blank" href="https://www.instagram.com/transfer.y.transportes/"><i class="bi bi-instagram"> transfer.y.transportes</i></a></p>
+            <p>© 2024 - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal_cont">
+            <i class="bi bi-x-square close"></i>
+            <h3>Terminos de Servicio</h3>
+            <p>* Cada reserva debe ser cancelando un 10% del valor total.</p>
+            <p>* El valor de reserva no es reembolsable.</p>
+            <p>* La capacidad maxima de pasajeros es de 8 en un viaje.</p>
+            <p>* El valor del trayecto puede variar en base a kilómetros, cantidad de pasajeros y peajes ( O tags segun corresponda ).</p>
+            <p>* Si un viaje tiene paradas adicionales estás se respetarán, pero si no se estipularon antes, están serán cobradas  de forma adicional.</p>
+            <p>* Nos reservamos el derecho de atencion al cliente.</p>
+            <p>* El conductor respetará en todo momento las leyes de tránsito.</p>
+            <p>* En caso de ser fiscalizados y esto provocará un retraso en el trayecto y producto de esto una perdida de pasaje o ticket, Transfer y Transportes Edson Santelices no sera responsable.</p>
+        </div>
+    </div>
+
+    <script>
+        var btn = document.getElementById("open_modal");
+        var modal = document.getElementById("modal");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+    
+
+</body>
+
+</html>

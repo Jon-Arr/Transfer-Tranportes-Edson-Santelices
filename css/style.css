@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*************************************************HEADER*/
+header{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    width: 100%;
+    height: 50%;
+    align-content: center;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+}
+.wsp{
+    color: rgb(47, 205, 55);
+}
+nav{
+    height: 50%;
+    align-content: center;
+}
+
+/*************************************************BODY*/
+section{
+    width: 100%;
+    height: 85vh;
+}
+.galeria_cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.galeria{
+    width: 100%;
+    height: 85%;
+    background-image:url(../img/img1.jpg);
+    background-size:cover;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.organiza_viaje{
+    background-color: rgba(255, 255, 255, 0.712);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 10px 40px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    top:230px;
+    border: 2px solid black;
+}
+.who_cont{
+    display: flex;
+    justify-content: center;
+
+}
+.who{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+}
+
+/*************************************************MODAL*/
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.386);
+    display: none;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    overflow: auto;
+}
+.modal_cont{
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border: 2px black double;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: justify;
+}
+.close{
+    font-size: 30px;
+}
+
+/*************************************************FOOTER*/
+footer{
+    background-color: rgb(21, 21, 21);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+p{
+    margin: 10px 0;
+    font-weight: 600;
+}
+.insta{
+    color: rgb(231, 98, 68);
+}
