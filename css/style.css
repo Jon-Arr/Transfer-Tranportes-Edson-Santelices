@@ -3,6 +3,11 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-image: url(../img/fondo.jpg);
+    background-size:cover;
+    background-position: center;
+}
 a{
     text-decoration: none;
     color: black;
@@ -27,6 +32,12 @@ ul{
     list-style: none;
     justify-content: space-evenly;
 }
+.title ul{
+    justify-content: space-around;
+}
+.title ul li img{
+    width: 220px;
+}
 .wsp{
     border: 1px solid;
     border-radius: 20px;
@@ -48,7 +59,7 @@ nav ul li:hover{
     border-radius: 20px;
     padding: 10px; */
     /* text-decoration: underline; */
-    animation: ani 1s ;
+    animation: ani 2s ;
 }
 @keyframes ani{
     0%{padding:0px;}
@@ -119,11 +130,12 @@ section{
     align-items: center;
     text-align: center;
     width: 80%;
+    padding: 50px 0;
 }
 .price hr{
     width: 50%;
 }
-.price h3{
+.price h2{
     text-decoration: underline;
 }
 .who_cont img{
