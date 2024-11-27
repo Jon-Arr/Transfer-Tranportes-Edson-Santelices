@@ -7,7 +7,6 @@ a{
     text-decoration: none;
     color: black;
 }
-
 /*************************************************************************************INDEX*/
 /*************************************************HEADER*/
 header{
@@ -28,12 +27,23 @@ ul{
     list-style: none;
     justify-content: space-evenly;
 }
+.wsp{
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 10px;
+}
 .wsp, .contact_wsp{
     color: rgb(47, 205, 55);
 }
 nav{
     height: 50%;
     align-content: center;
+}
+nav ul li:hover{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    transition-timing-function:ease-in;
 }
 
 /*************************************************BODY*/
@@ -51,14 +61,14 @@ section{
 }
 .galeria{
     width: 100%;
-    height: 85%;
+    height: 100%;
     background-image:url(../img/img1.jpg);
     background-size:cover;
     background-position: center;
     display: flex;
     align-items:center;
     justify-content: center;
-    animation: gal 30s infinite;
+    animation: gal 40s infinite;
 }
 @keyframes gal{
     0% {background-image: url(../img/img1.jpg);}
@@ -78,7 +88,7 @@ section{
     padding: 10px 40px;
     margin: 20px;
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
-    top:230px;
+    top:270px;
     border: 2px solid black;
 }
 .who_cont, .price_cont{
