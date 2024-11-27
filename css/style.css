@@ -8,6 +8,7 @@ a{
     color: black;
 }
 
+/*************************************************************************************INDEX*/
 /*************************************************HEADER*/
 header{
     width: 100%;
@@ -69,18 +70,24 @@ section{
     top:230px;
     border: 2px solid black;
 }
-.who_cont{
+.who_cont, .price_cont{
     display: flex;
     justify-content: center;
     padding-top: 20px;
 }
-.who{
+.who, .price{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 80%;
+}
+.price hr{
+    width: 50%;
+}
+.price h3{
+    text-decoration: underline;
 }
 
 /*************************************************MODAL*/
@@ -131,4 +138,25 @@ p{
 }
 .insta{
     color: rgb(231, 98, 68);
+}
+
+/*************************************************************************************CONTACTO*/
+.form_cont{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form_cont h2{
+    margin:20px 0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+form textarea{
+    height: 100px;
 }
