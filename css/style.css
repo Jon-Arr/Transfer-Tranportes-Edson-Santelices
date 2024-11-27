@@ -72,7 +72,7 @@ section{
 .who_cont{
     display: flex;
     justify-content: center;
-
+    padding-top: 20px;
 }
 .who{
     display: flex;
@@ -101,12 +101,13 @@ section{
 }
 .modal_cont{
     width: 80%;
-    height: 80%;
     background-color: white;
     border: 2px black double;
     border-radius: 20px;
     padding: 40px;
-    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .close{
     font-size: 30px;
