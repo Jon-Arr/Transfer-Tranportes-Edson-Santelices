@@ -32,6 +32,10 @@ ul{
     border-radius: 20px;
     padding: 10px;
 }
+.wsp:hover{
+    color: white;
+    background-color: rgb(47, 205, 55);
+}
 .wsp, .contact_wsp{
     color: rgb(47, 205, 55);
 }
@@ -40,10 +44,20 @@ nav{
     align-content: center;
 }
 nav ul li:hover{
-    border: 1px solid black;
+    /* border: 1px solid black;
     border-radius: 20px;
-    padding: 10px;
-    transition-timing-function:ease-in;
+    padding: 10px; */
+    /* text-decoration: underline; */
+    animation: ani 1s ;
+}
+@keyframes ani{
+    0%{padding:0px;}
+    10%{border: 1px solid black;
+        border-radius: 20px;
+        padding: 10px;}
+    100%{border: 1px solid black;
+        border-radius: 20px;
+        padding: 10px;}
 }
 
 /*************************************************BODY*/
@@ -142,6 +156,9 @@ section{
     flex-direction: column;
     justify-content: space-evenly;
 }
+.modal_cont h2{
+    text-align: center;
+}
 .close{
     font-size: 30px;
 }
@@ -191,6 +208,14 @@ p{
     margin: 0 10px;
     background-color: rgba(60, 60, 60, 0.352);
 }
+.contact_wsp:hover{
+    color: white;
+    background-color: rgb(47, 205, 55);
+}
+.contact_insta:hover{
+    color: white;
+    background-color: rgb(231, 98, 68);;
+}
 form{
     display: flex;
     flex-direction: column;
@@ -199,7 +224,7 @@ form{
     border-radius: 20px;
     padding: 10px;
     margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.508);
+    background-color: rgba(255, 255, 255, 0.812);
 }
 form textarea{
     height: 100px;
