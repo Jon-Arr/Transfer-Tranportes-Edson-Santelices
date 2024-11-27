@@ -54,9 +54,19 @@ section{
     height: 85%;
     background-image:url(../img/img1.jpg);
     background-size:cover;
+    background-position: center;
     display: flex;
     align-items:center;
     justify-content: center;
+    animation: gal 20s infinite;
+}
+@keyframes gal{
+    0% {background-image: url(../img/img1.jpg);}
+    20% {background-image: url(../img/img2.jpg);}
+    40% {background-image: url(../img/img3.jpg);}
+    60% {background-image: url(../img/img4.jpg);}
+    80% {background-image: url(../img/tarjeta2.jpg);}
+    100% {background-image: url(../img/img1.jpg);}
 }
 .organiza_viaje{
     background-color: rgba(255, 255, 255, 0.712);
