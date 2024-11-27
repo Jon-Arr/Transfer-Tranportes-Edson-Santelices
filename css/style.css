@@ -42,6 +42,7 @@ ul{
     border: 1px solid;
     border-radius: 20px;
     padding: 10px;
+    background-color: #ffffff83;
 }
 .wsp:hover{
     color: white;
@@ -135,7 +136,7 @@ section{
 .price hr{
     width: 50%;
 }
-.price h2{
+h2{
     text-decoration: underline;
 }
 .who_cont img{
