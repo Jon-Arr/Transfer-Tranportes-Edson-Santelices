@@ -40,6 +40,7 @@ nav{
 section{
     width: 100%;
     height: 85vh;
+    overflow: hidden;
 }
 .galeria_cont{
     width: 100%;
@@ -72,7 +73,9 @@ section{
 }
 .who_cont, .price_cont{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding-top: 20px;
 }
 .who, .price{
@@ -88,6 +91,9 @@ section{
 }
 .price h3{
     text-decoration: underline;
+}
+.who_cont img{
+    width: 100%;
 }
 
 /*************************************************MODAL*/
@@ -156,6 +162,9 @@ form{
     display: flex;
     flex-direction: column;
     width: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
 }
 form textarea{
     height: 100px;
