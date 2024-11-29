@@ -325,6 +325,12 @@ h2 {
 .who_cont img {
     width: 100%;
 }
+.contacto_btn{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    text-decoration: none;
+}
 
 @media (max-width: 600px) {
     .who_cont,
