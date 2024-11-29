@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Contacto - Transfer & Tranportes Edson Santelices</title>
@@ -40,27 +41,29 @@
                                 Contacto</i></a></li>
                 </ul>
             </div>
-            <div id="menu2" class="menu2">                
+            <div id="menu2" class="menu2">
                 <i id="menu_op" class="bi bi-card-list menu_op" onclick="menu_open()"></i>
                 <ul id="nav_menu2" class="nav_menu">
                     <li class="close_i">
                         <i id="menu_cl" class="bi bi-card-list menu_cl" onclick="menu_close()"></i>
                     </li>
-                    <li class="nav_menu_list2"><a href="./index#who_cont"><i class="bi bi-award"> Quienes Somos</i></a></li>
+                    <li class="nav_menu_list2"><a href="./index#who_cont"><i class="bi bi-award"> Quienes Somos</i></a>
+                    </li>
                     <hr>
-                    <li class="nav_menu_list2"><a href="./index#price_cont"><i class="bi bi-cash-coin"> Valores</i></a></li>
+                    <li class="nav_menu_list2"><a href="./index#price_cont"><i class="bi bi-cash-coin"> Valores</i></a>
+                    </li>
                     <hr>
                     <li class="nav_menu_list2"><i class="bi bi-people"> Personas | Empresas | Cliente Convenio</i></li>
                     <hr>
                     <li class="nav_menu_list2"><a id="open_modal2" class="open_modal2" href="#"><i
-                        class="bi bi-file-earmark-medical"> Terminos de Servicio</i></a></li>
-                        <hr>
+                                class="bi bi-file-earmark-medical"> Terminos de Servicio</i></a></li>
+                    <hr>
                     <li class="nav_menu_list2"><a href="./contacto.html"><i class="bi bi-envelope">
                                 Contacto</i></a></li>
                 </ul>
                 <i class="bi bi-whatsapp wsp_menu2"></i>
             </div>
-            
+
         </nav>
     </header>
 
@@ -68,120 +71,123 @@
         <article class="form_cont">
             <h2>CONTACTO</h2>
             <div>
-                <a class="contact_wsp contact_ico" target="_blank" href="https://wa.me/962517890?text=Hola,%20te%20contacto%20para%20...">
+                <a class="contact_wsp contact_ico" target="_blank"
+                    href="https://wa.me/962517890?text=Hola,%20te%20contacto%20para%20...">
                     <i class="bi bi-whatsapp"> Whatsapp</i>
                 </a>
                 <a class="contact_insta contact_ico" target="_blank" href="https://ig.me/m/transfer.y.transportes">
                     <i class="bi bi-instagram"> Instagram DM</i>
                 </a>
             </div>
-            <form action="" method="POST">
-                <label for="">Nombre</label>
-                <input type="text" placeholder="Nombre Apellido">
-                <label for="">Email</label>
-                <input type="email" placeholder="Ej: email@email.com">
-                <label for="">Telefono</label>
-                <input type="number" placeholder="Ej: 987654321">
-                <label for="">Fecha de reserva</label>
-                <input type="date">
-                <label for="">Servicio Requerido</label>
-                <select>
+            <form id="myForm">
+                <label for="name">Nombre</label>
+                <input id="name" name="name" type="text" pattern="[a-zA-Z ]+" placeholder="Nombre Apellido" required>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Ej: email@ejemplo.com" required>
+                <label for="number">Telefono</label>
+                <input id="number" name="number" type="tel" pattern="[0-9]+" placeholder="Ej: 987654321" required>
+                <label for="date">Fecha de reserva</label>
+                <input id="date" name="date" type="date" required>
+                <label for="service">Servicio Requerido</label>
+                <select id="service" name="service" required>
                     <option value="" disabled selected>Servicios</option>
-                    <option value="">Transfer al Aeropuerto</option>
-                    <option value="">Transporte Empresas Facturable</option>
-                    <option value="">Transporte Matrimonios y Eventos</option>
-                    <option value="">Viajes dentro y fuera de Santiago</option>
-                    <option value="">Transporte o Envios XL</option>
-                    <option value="">Transporte para horas medicas con espera (Ida y vuelta)</option>
-                </select>                
-                <label for="">Punto de Origen</label>
-                <select>
+                    <option value="Dudas / Consultas">Dudas / Consultas</option>
+                    <option value="Transfer al Aeropuerto">Transfer al Aeropuerto</option>
+                    <option value="Transporte Empresas Facturable">Transporte Empresas Facturable</option>
+                    <option value="Transporte Matrimonios y Eventos">Transporte Matrimonios y Eventos</option>
+                    <option value="Viajes dentro y fuera de Santiago">Viajes dentro y fuera de Santiago</option>
+                    <option value="Transporte o Envios XL">Transporte o Envios XL</option>
+                    <option value="Transporte para horas medicas con espera (Ida y vuelta)">Transporte para horas
+                        medicas con espera (Ida y vuelta)</option>
+                </select>
+                <label for="origin">Punto de Origen</label>
+                <select id="origin" name="origin" required>
                     <option value="" disabled selected>Comuna Origen</option>
-                    <option value="">Cerrillos</option>
-                    <option value="">Cerro Navia</option>
-                    <option value="">Colina</option>
-                    <option value="">Conchali</option>
-                    <option value="">El Bosque</option>
-                    <option value="">Huechuraba</option>
-                    <option value="">Independencia</option>
-                    <option value="">La Cisterna</option>
-                    <option value="">La Florida</option>
-                    <option value="">La Pintana</option>
-                    <option value="">La Granja</option>
-                    <option value="">La Reina</option>
-                    <option value="">Lampa</option>
-                    <option value="">Las Condes</option>
-                    <option value="">Lo Barnechea</option>
-                    <option value="">Lo Espejo</option>
-                    <option value="">Lo Prado</option>
-                    <option value="">Macul</option>
-                    <option value="">Ñuñoa</option>
-                    <option value="">Padre Hurtado</option>
-                    <option value="">Pedro Aguirre Cerda</option>
-                    <option value="">Peñaflor</option>
-                    <option value="">Peñalolen</option>
-                    <option value="">Pirque</option>
-                    <option value="">Providencia</option>
-                    <option value="">Pudahuel</option>
-                    <option value="">Puente Alto</option>
-                    <option value="">Quilicura</option>
-                    <option value="">Quinta Normal</option>
-                    <option value="">Recoleta</option>
-                    <option value="">Renca</option>
-                    <option value="">San Bernardo</option>
-                    <option value="">San Jose de Maipo</option>
-                    <option value="">San Miguel</option>
-                    <option value="">San Joaquin</option>
-                    <option value="">San Ramon</option>
-                    <option value="">Santiago</option>
-                    <option value="">Vitacura</option>
+                    <option value="Cerrillos">Cerrillos</option>
+                    <option value="Cerro Navia">Cerro Navia</option>
+                    <option value="Colina">Colina</option>
+                    <option value="Conchali">Conchali</option>
+                    <option value="El Bosque">El Bosque</option>
+                    <option value="Huechuraba">Huechuraba</option>
+                    <option value="Independencia">Independencia</option>
+                    <option value="La Cisterna">La Cisterna</option>
+                    <option value="La Florida">La Florida</option>
+                    <option value="La Pintana">La Pintana</option>
+                    <option value="La Granja">La Granja</option>
+                    <option value="La Reina">La Reina</option>
+                    <option value="Lampa">Lampa</option>
+                    <option value="Las Condes">Las Condes</option>
+                    <option value="Lo Barnechea">Lo Barnechea</option>
+                    <option value="Lo Espejo">Lo Espejo</option>
+                    <option value="Lo Prado">Lo Prado</option>
+                    <option value="Macul">Macul</option>
+                    <option value="Ñuñoa">Ñuñoa</option>
+                    <option value="Padre Hurtado">Padre Hurtado</option>
+                    <option value="Pedro Aguirre Cerda">Pedro Aguirre Cerda</option>
+                    <option value="Peñaflor">Peñaflor</option>
+                    <option value="Peñalolen">Peñalolen</option>
+                    <option value="Pirque">Pirque</option>
+                    <option value="Providencia">Providencia</option>
+                    <option value="Pudahuel">Pudahuel</option>
+                    <option value="Puente Alto">Puente Alto</option>
+                    <option value="Quilicura">Quilicura</option>
+                    <option value="Quinta Normal">Quinta Normal</option>
+                    <option value="Recoleta">Recoleta</option>
+                    <option value="Renca">Renca</option>
+                    <option value="San Bernardo">San Bernardo</option>
+                    <option value="San Jose de Maipo">San Jose de Maipo</option>
+                    <option value="San Miguel">San Miguel</option>
+                    <option value="San Joaquin">San Joaquin</option>
+                    <option value="San Ramon">San Ramon</option>
+                    <option value="Santiago">Santiago</option>
+                    <option value="Vitacura">Vitacura</option>
                 </select>
-                <label for="">Punto de Destino</label>
-                <select>
+                <label for="destination">Punto de Destino</label>
+                <select id="destination" name="destination" required>
                     <option value="" disabled selected>Comuna Destino</option>
-                    <option value="">Cerrillos</option>
-                    <option value="">Cerro Navia</option>
-                    <option value="">Colina</option>
-                    <option value="">Conchali</option>
-                    <option value="">El Bosque</option>
-                    <option value="">Huechuraba</option>
-                    <option value="">Independencia</option>
-                    <option value="">La Cisterna</option>
-                    <option value="">La Florida</option>
-                    <option value="">La Pintana</option>
-                    <option value="">La Granja</option>
-                    <option value="">La Reina</option>
-                    <option value="">Lampa</option>
-                    <option value="">Las Condes</option>
-                    <option value="">Lo Barnechea</option>
-                    <option value="">Lo Espejo</option>
-                    <option value="">Lo Prado</option>
-                    <option value="">Macul</option>
-                    <option value="">Ñuñoa</option>
-                    <option value="">Padre Hurtado</option>
-                    <option value="">Pedro Aguirre Cerda</option>
-                    <option value="">Peñaflor</option>
-                    <option value="">Peñalolen</option>
-                    <option value="">Pirque</option>
-                    <option value="">Providencia</option>
-                    <option value="">Pudahuel</option>
-                    <option value="">Puente Alto</option>
-                    <option value="">Quilicura</option>
-                    <option value="">Quinta Normal</option>
-                    <option value="">Recoleta</option>
-                    <option value="">Renca</option>
-                    <option value="">San Bernardo</option>
-                    <option value="">San Jose de Maipo</option>
-                    <option value="">San Miguel</option>
-                    <option value="">San Joaquin</option>
-                    <option value="">San Ramon</option>
-                    <option value="">Santiago</option>
-                    <option value="">Vitacura</option>
+                    <option value="Cerrillos">Cerrillos</option>
+                    <option value="Cerro Navia">Cerro Navia</option>
+                    <option value="Colina">Colina</option>
+                    <option value="Conchali">Conchali</option>
+                    <option value="El Bosque">El Bosque</option>
+                    <option value="Huechuraba">Huechuraba</option>
+                    <option value="Independencia">Independencia</option>
+                    <option value="La Cisterna">La Cisterna</option>
+                    <option value="La Florida">La Florida</option>
+                    <option value="La Pintana">La Pintana</option>
+                    <option value="La Granja">La Granja</option>
+                    <option value="La Reina">La Reina</option>
+                    <option value="Lampa">Lampa</option>
+                    <option value="Las Condes">Las Condes</option>
+                    <option value="Lo Barnechea">Lo Barnechea</option>
+                    <option value="Lo Espejo">Lo Espejo</option>
+                    <option value="Lo Prado">Lo Prado</option>
+                    <option value="Macul">Macul</option>
+                    <option value="Ñuñoa">Ñuñoa</option>
+                    <option value="Padre Hurtado">Padre Hurtado</option>
+                    <option value="Pedro Aguirre Cerda">Pedro Aguirre Cerda</option>
+                    <option value="Peñaflor">Peñaflor</option>
+                    <option value="Peñalolen">Peñalolen</option>
+                    <option value="Pirque">Pirque</option>
+                    <option value="Providencia">Providencia</option>
+                    <option value="Pudahuel">Pudahuel</option>
+                    <option value="Puente Alto">Puente Alto</option>
+                    <option value="Quilicura">Quilicura</option>
+                    <option value="Quinta Normal">Quinta Normal</option>
+                    <option value="Recoleta">Recoleta</option>
+                    <option value="Renca">Renca</option>
+                    <option value="San Bernardo">San Bernardo</option>
+                    <option value="San Jose de Maipo">San Jose de Maipo</option>
+                    <option value="San Miguel">San Miguel</option>
+                    <option value="San Joaquin">San Joaquin</option>
+                    <option value="San Ramon">San Ramon</option>
+                    <option value="Santiago">Santiago</option>
+                    <option value="Vitacura">Vitacura</option>
                 </select>
-                <label for="">Comentarios</label>
-                <textarea name="" id="" placeholder="Escriba sus consultas o comentarios aqui"></textarea>
-                <br>
-                <button>Enviar</button>
+                <label for="texto">Comentarios</label>
+                <textarea id="texto" name="texto" placeholder="Escriba sus consultas aqui" pattern="[a-zA-Z0-9 ]+"
+                    required></textarea>
+                <button type="button" onclick="sendForm()">Enviar</button>
             </form>
         </article>
     </section>
@@ -206,11 +212,14 @@
             <p>* Cada reserva debe ser cancelando un 10% del valor total.</p>
             <p>* El valor de reserva no es reembolsable.</p>
             <p>* La capacidad maxima de pasajeros es de 8 en un viaje.</p>
-            <p>* El valor del trayecto puede variar en base a kilómetros, cantidad de pasajeros y peajes ( O tags segun corresponda ).</p>
-            <p>* Si un viaje tiene paradas adicionales estás se respetarán, pero si no se estipularon antes, están serán cobradas  de forma adicional.</p>
+            <p>* El valor del trayecto puede variar en base a kilómetros, cantidad de pasajeros y peajes ( O tags segun
+                corresponda ).</p>
+            <p>* Si un viaje tiene paradas adicionales estás se respetarán, pero si no se estipularon antes, están serán
+                cobradas de forma adicional.</p>
             <p>* Nos reservamos el derecho de atencion al cliente.</p>
             <p>* El conductor respetará en todo momento las leyes de tránsito.</p>
-            <p>* En caso de ser fiscalizados y esto provocará un retraso en el trayecto y producto de esto una perdida de pasaje o ticket, Transfer y Transportes Edson Santelices no sera responsable.</p>
+            <p>* En caso de ser fiscalizados y esto provocará un retraso en el trayecto y producto de esto una perdida
+                de pasaje o ticket, Transfer y Transportes Edson Santelices no sera responsable.</p>
         </div>
     </div>
 
@@ -255,8 +264,97 @@
                 modal.style.display = "none";
             }
         }
+
+        // function sendWhatsApp() {
+        //     const name = document.getElementById('name').value;
+        //     const email = document.getElementById('email').value;
+        //     const number = document.getElementById('number').value;
+        //     const date = document.getElementById('date').value;
+        //     const service = document.getElementById('service').value;
+        //     const origin = document.getElementById('origin').value;
+        //     const destination = document.getElementById('destination').value;
+        //     const comments = document.getElementById('texto').value;
+
+        //     const message = `Hola, te contacto por ${service} con los siguientes datos:
+        // Nombre: ${name}
+        // Email: ${email}
+        // Teléfono: ${number}
+        // Fecha de reserva: ${date}
+        // Origen: ${origin}
+        // Destino: ${destination}
+        // Comentarios: ${comments}`;
+
+        //     const phoneNumber = '56962517890'; 
+        //     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        //     window.open(url, '_blank');
+        // }
+
+        function sendForm() {
+            const formData = new FormData(document.getElementById('myForm'));
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const number = document.getElementById('number').value;
+            const date = document.getElementById('date').value;
+            const service = document.getElementById('service').value;
+            const origin = document.getElementById('origin').value;
+            const destination = document.getElementById('destination').value;
+            const texto = document.getElementById('texto').value;
+
+            fetch('../php/envio_correo.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    console.log('Respuesta recibida:', response);
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Datos recibidos:', data);
+
+                    if (data.success) {
+                        Swal.fire({
+                            title: 'Correo enviado',
+                            text: 'El correo ha sido enviado con éxito.',
+                            icon: 'success',
+                            confirmButtonText: 'Continuar'
+                        }).then(() => {
+                            const phoneNumber = '56962517890';
+                            const message = `Hola, te contacto por ${service} con los siguientes datos:
+        Nombre: ${name}
+        Email: ${email}
+        Teléfono: ${number}
+        Fecha de reserva: ${date}
+        Origen: ${origin}
+        Destino: ${destination}
+        Comentarios: ${texto}`;
+                            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                            window.open(url, '_blank');
+                            setTimeout(() => {
+                                window.location.href = '../index.html';
+                            }, 3000);
+                        });
+                    } else {
+                        Swal.fire({
+                            title: 'Error',
+                            text: data.message || 'No se pudo enviar el correo.',
+                            icon: 'error',
+                            confirmButtonText: 'Intentar de nuevo'
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error en el fetch:', error);
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'Ocurrió un error inesperado.',
+                        icon: 'error',
+                        confirmButtonText: 'Intentar de nuevo'
+                    });
+                });
+        }
     </script>
-    
+
 
 </body>
 
