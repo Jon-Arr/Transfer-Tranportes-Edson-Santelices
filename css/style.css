@@ -50,15 +50,15 @@ ul {
     border: 1px solid;
     border-radius: 20px;
     padding: 10px;
-    background-color: #ffffff83;
-}
-
-.wsp:hover {
-    color: white;
+    color: rgba(255, 255, 255, 0.732);
     background-color: rgb(47, 205, 55);
 }
 
-.wsp,
+.wsp:hover {
+    color: rgb(47, 205, 55);
+    background-color: white;
+}
+
 .contact_wsp {
     color: rgb(47, 205, 55);
 }
@@ -97,12 +97,12 @@ nav {
     border: 1px solid;
     border-radius: 20px;
     padding: 10px;
-    background-color: #ffffff83;
-    color: rgb(47, 205, 55);
+    background-color: rgb(47, 205, 55);
+    color: rgb(230, 230, 230);
 }
 .wsp_menu2:hover {
-    color: white;
-    background-color: rgb(47, 205, 55);
+    color: rgb(47, 205, 55);
+    background-color: rgba(255, 255, 255, 0.668);
 }
 
 @keyframes ani {
@@ -198,14 +198,14 @@ nav {
 
     .menu2 {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: space-between;
         align-items: start;
         width: 100%;
     }
     .close_i{
         display: flex;
-        justify-content: end;
+        justify-content: start;
         width: 100%;
     }
 
