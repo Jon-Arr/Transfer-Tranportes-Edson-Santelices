@@ -50,13 +50,13 @@ ul {
     border: 1px solid;
     border-radius: 20px;
     padding: 10px;
-    color: rgba(255, 255, 255, 0.732);
-    background-color: rgb(47, 205, 55);
+    color: rgb(47, 205, 55);
+    background-color: rgba(255, 255, 255, 0.623);
 }
 
 .wsp:hover {
-    color: rgb(47, 205, 55);
-    background-color: white;
+    color: rgba(255, 255, 255, 0.711);
+    background-color: rgb(47, 205, 55);
 }
 
 .contact_wsp {
@@ -97,8 +97,8 @@ nav {
     border: 1px solid;
     border-radius: 20px;
     padding: 10px;
-    background-color: rgb(47, 205, 55);
-    color: rgb(230, 230, 230);
+    background-color: rgba(255, 255, 255, 0.626);
+    color: rgb(47, 205, 55);
 }
 .wsp_menu2:hover {
     color: rgb(47, 205, 55);
@@ -145,6 +145,7 @@ nav {
 
     #nav_menu2 {
         width: 100%;
+        text-align: center;
     }
 
     .menu_op {
@@ -190,15 +191,17 @@ nav {
     }
 
     .wsp {
-        display: none;
+        display: none; 
     }
     .wsp_menu2{
         display:flex;
+        margin-top: 15px;   
+        font-size: 20px;
     }
 
     .menu2 {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: space-between;
         align-items: start;
         width: 100%;
