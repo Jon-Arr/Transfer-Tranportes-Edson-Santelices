@@ -330,6 +330,7 @@ h2 {
     border-radius: 20px;
     padding: 5px;
     text-decoration: none;
+    box-shadow: 5px 5px 5px black;
 }
 
 @media (max-width: 600px) {
