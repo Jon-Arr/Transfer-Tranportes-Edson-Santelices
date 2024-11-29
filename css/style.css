@@ -1,112 +1,258 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-image: url(../img/fondo.jpg);
-    background-size:cover;
+    background-size: cover;
     background-position: center;
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
+
 /*************************************************************************************INDEX*/
 /*************************************************HEADER*/
-header{
+header {
     width: 100%;
     height: 15vh;
     display: flex;
     flex-direction: column;
 }
-.title{
+
+.title {
     width: 100%;
     height: 50%;
     align-content: center;
 }
-ul{
+
+ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
     justify-content: space-evenly;
 }
-.title ul{
+
+.title ul {
     justify-content: space-around;
 }
-.title ul li img{
+
+.title ul li img {
     width: 220px;
 }
-.wsp{
+
+.wsp {
     border: 1px solid;
     border-radius: 20px;
     padding: 10px;
     background-color: #ffffff83;
 }
-.wsp:hover{
+
+.wsp:hover {
     color: white;
     background-color: rgb(47, 205, 55);
 }
-.wsp, .contact_wsp{
+
+.wsp,
+.contact_wsp {
     color: rgb(47, 205, 55);
 }
-nav{
+
+nav {
     height: 50%;
     align-content: center;
 }
-nav ul li:hover{
-    /* border: 1px solid black;
-    border-radius: 20px;
-    padding: 10px; */
-    /* text-decoration: underline; */
-    animation: ani 2s ;
+
+.bi-card-list {
+    display: none;
+    font-size: 50px;
+    margin-top: 10px;
+    justify-self: center;
 }
-@keyframes ani{
-    0%{padding:0px;}
-    10%{border: 1px solid black;
+
+.menu,
+.menu2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu2 {
+    display: none;
+}
+
+.nav_menu {
+    display: flex;
+}
+
+.nav_menu_list:hover {
+    animation: ani 2s;
+}
+
+@keyframes ani {
+    0% {
+        padding: 0px;
+    }
+
+    10% {
+        border: 1px solid black;
         border-radius: 20px;
-        padding: 10px;}
-    100%{border: 1px solid black;
+        padding: 10px;
+    }
+
+    100% {
+        border: 1px solid black;
         border-radius: 20px;
-        padding: 10px;}
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 25vh;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .wsp {
+        display: none;
+    }
+
+    .section_gal {
+        height: 75vh;
+    }
+
+    .who_cont,
+    .price_cont {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .who,
+    .price {
+        padding: 0px 0px;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 830px) {
+    .menu {
+        display: none;
+    }
+
+    .menu2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav_menu {
+        display: none;
+        flex-direction: column;
+        position: relative;
+        background-color: rgb(221, 221, 221);
+    }
+
+    #nav_menu2 {
+        width: 100%;
+    }
+
+    .menu_op {
+        display: flex;
+    }
+
+    .menu_cl {
+        text-shadow: 5px 5px 5px black;
+    }
+
+    .nav_menu_list2 {
+        padding: 10px;
+    }
+
+    .nav_menu_list2:hover {
+        animation: none;
+        text-decoration: underline;
+    }
+
+    ul hr {
+        width: 80%;
+    }
+}
+
+@media (min-width: 830px) {
+    #menu2 {
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+    }
 }
 
 /*************************************************BODY*/
-section{
+section {
     width: 100%;
     height: 85vh;
     overflow: hidden;
 }
-.galeria_cont{
+
+.galeria_cont {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.galeria{
+
+.galeria {
     width: 100%;
     height: 100%;
-    background-image:url(../img/img1.jpg);
-    background-size:cover;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
     background-position: center;
     display: flex;
-    align-items:center;
+    align-items: end;
     justify-content: center;
     animation: gal 40s infinite;
 }
-@keyframes gal{
-    0% {background-image: url(../img/img1.jpg);}
-    20% {background-image: url(../img/img2.jpg);}
-    40% {background-image: url(../img/img3.jpg);}
-    60% {background-image: url(../img/img4.jpg);}
-    80% {background-image: url(../img/tarjeta2.jpg);}
-    100% {background-image: url(../img/img1.jpg);}
+
+@keyframes gal {
+    0% {
+        background-image: url(../img/img1.jpg);
+    }
+
+    20% {
+        background-image: url(../img/img2.jpg);
+    }
+
+    40% {
+        background-image: url(../img/img3.jpg);
+    }
+
+    60% {
+        background-image: url(../img/img4.jpg);
+    }
+
+    80% {
+        background-image: url(../img/tarjeta2.jpg);
+    }
+
+    100% {
+        background-image: url(../img/img1.jpg);
+    }
 }
-.organiza_viaje{
+
+.organiza_viaje {
     background-color: rgba(255, 255, 255, 0.712);
-    position: relative;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
@@ -114,17 +260,20 @@ section{
     padding: 10px 40px;
     margin: 20px;
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
-    top:270px;
     border: 2px solid black;
 }
-.who_cont, .price_cont{
+
+.who_cont,
+.price_cont {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
 }
-.who, .price{
+
+.who,
+.price {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,18 +282,36 @@ section{
     width: 80%;
     padding: 50px 0;
 }
-.price hr{
+
+.price hr {
     width: 50%;
 }
-h2{
+
+h2 {
     text-decoration: underline;
 }
-.who_cont img{
+
+.who_cont img {
     width: 100%;
 }
 
+@media (max-width: 600px) {
+    .who_cont,
+    .price_cont {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .who,
+    .price {
+        justify-content: start;
+        overflow-y:auto;
+        padding: 20px 0;
+    }
+}
+
 /*************************************************MODAL*/
-.modal{
+.modal {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.386);
@@ -154,12 +321,13 @@ h2{
     align-items: center;
     position: fixed;
     z-index: 1;
-    padding-top: 100px; 
+    padding-top: 100px;
     left: 0;
     top: 0;
     overflow: auto;
 }
-.modal_cont{
+
+.modal_cont {
     width: 80%;
     background-color: white;
     border: 2px black double;
@@ -169,40 +337,46 @@ h2{
     flex-direction: column;
     justify-content: space-evenly;
 }
-.modal_cont h2{
+
+.modal_cont h2 {
     text-align: center;
 }
-.close{
+
+.close {
     font-size: 30px;
 }
 
 /*************************************************FOOTER*/
-footer{
+footer {
     background-color: rgb(21, 21, 21);
     color: white;
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
     width: 100%;
     padding: 20px 0;
 }
-p{
+
+p {
     margin: 10px 0;
     font-weight: 600;
 }
-.insta, .contact_insta{
+
+.insta,
+.contact_insta {
     color: rgb(231, 98, 68);
 }
 
 /*************************************************************************************CONTACTO*/
-.contact_section{
+.contact_section {
     background-image: url(../img/contact3.jpg);
     background-position: center;
     background-size: cover;
 }
-.form_cont{
+
+.form_cont {
     width: 100%;
     height: 100%;
     display: flex;
@@ -211,25 +385,31 @@ p{
     align-items: center;
     background-color: rgba(255, 255, 255, 0.329);
 }
-.form_cont h2{
-    margin:20px 0;
+
+.form_cont h2 {
+    margin: 20px 0;
 }
-.contact_ico{
+
+.contact_ico {
     border: 1px solid;
     border-radius: 20px;
     padding: 10px;
     margin: 0 10px;
     background-color: rgba(60, 60, 60, 0.352);
 }
-.contact_wsp:hover{
+
+.contact_wsp:hover {
     color: white;
     background-color: rgb(47, 205, 55);
 }
-.contact_insta:hover{
+
+.contact_insta:hover {
     color: white;
-    background-color: rgb(231, 98, 68);;
+    background-color: rgb(231, 98, 68);
+    ;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -239,6 +419,7 @@ form{
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.812);
 }
-form textarea{
+
+form textarea {
     height: 100px;
 }

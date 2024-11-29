@@ -16,7 +16,8 @@
             <ul>
                 <li>
                     <h1>
-                        <a href="../index.html"><img class="logo" src="./img/logo.jpg" alt="logo transfer y transportes Edson Santelices"></a>
+                        <a href="../index.html"><img class="logo" src="./img/logo.jpg"
+                                alt="logo transfer y transportes Edson Santelices"></a>
                     </h1>
                 </li>
                 <li>
@@ -28,17 +29,39 @@
             </ul>
         </div>
         <nav>
-            <ul class="nav_menu">
-                <li><a href="#who_cont"><i class="bi bi-award"> Quienes Somos</i></a></li>
-                <li><a href="#price_cont"><i class="bi bi-cash-coin"> Valores</i></a></li>
-                <li><i class="bi bi-people"> Personas | Empresas | Cliente Convenio</i></li>
-                <li><a id="open_modal" class="open_modal" href="#"><i class="bi bi-file-earmark-medical"> Terminos de Servicio</i></a></li>
-                <li><a href="./pages/contacto.html"><i class="bi bi-envelope"> Contacto</i></a></li>
-            </ul>
+            <div id="menu" class="menu">
+                <ul id="nav_menu" class="nav_menu">
+                    <li class="nav_menu_list"><a href="#who_cont"><i class="bi bi-award"> Quienes Somos</i></a></li>
+                    <li class="nav_menu_list"><a href="#price_cont"><i class="bi bi-cash-coin"> Valores</i></a></li>
+                    <li class="nav_menu_list"><i class="bi bi-people"> Personas | Empresas | Cliente Convenio</i></li>
+                    <li class="nav_menu_list"><a id="open_modal" class="open_modal" href="#"><i
+                                class="bi bi-file-earmark-medical"> Terminos de Servicio</i></a></li>
+                    <li class="nav_menu_list"><a href="./pages/contacto.html"><i class="bi bi-envelope">
+                                Contacto</i></a></li>
+                </ul>
+            </div>
+            <div id="menu2" class="menu2">
+                <i id="menu_op" class="bi bi-card-list menu_op" onclick="menu_open()"></i>
+                <i id="menu_cl" class="bi bi-card-list menu_cl" onclick="menu_close()"></i>
+                <ul id="nav_menu2" class="nav_menu">
+                    <li class="nav_menu_list2"><a href="#who_cont"><i class="bi bi-award"> Quienes Somos</i></a></li>
+                    <hr>
+                    <li class="nav_menu_list2"><a href="#price_cont"><i class="bi bi-cash-coin"> Valores</i></a></li>
+                    <hr>
+                    <li class="nav_menu_list2"><i class="bi bi-people"> Personas | Empresas | Cliente Convenio</i></li>
+                    <hr>
+                    <li class="nav_menu_list2"><a id="open_modal2" class="open_modal2" href="#"><i
+                        class="bi bi-file-earmark-medical"> Terminos de Servicio</i></a></li>
+                        <hr>
+                    <li class="nav_menu_list2"><a href="./pages/contacto.html"><i class="bi bi-envelope">
+                                Contacto</i></a></li>
+                </ul>
+            </div>
+            
         </nav>
     </header>
 
-    <section>
+    <section class="section_gal">
         <article class="galeria_cont">
             <div class="galeria">
                 <a href="./pages/contacto.html">
@@ -50,7 +73,7 @@
         </article>
     </section>
 
-    <section>
+    <section class="section_who">
         <article id="who_cont" class="who_cont">
             <div class="who">
                 <h2>QUIENES SOMOS</h2>
@@ -70,7 +93,7 @@
         </article>
     </section>
 
-    <section>
+    <section class="section_price">
         <article id="price_cont" class="price_cont">
             <div class="price">
                 <h2>VALORES</h2>
@@ -108,7 +131,7 @@
 
     <!-- MODAL -->
     <div id="modal" class="modal">
-        <div class="modal_cont" scrollbar>
+        <div class="modal_cont">
             <i class="bi bi-x-square close"></i>
             <h2>Terminos de Servicio</h2>
             <p>* Cada reserva debe ser cancelando un 10% del valor total.</p>
@@ -126,11 +149,34 @@
     </div>
 
     <script>
-        var btn = document.getElementById("open_modal");
-        var modal = document.getElementById("modal");
-        var span = document.getElementsByClassName("close")[0];
+        function menu_open() {
+            let lista = document.getElementById("nav_menu2");
+            let menu_op = document.getElementById("menu_op");
+            let menu_cl = document.getElementById("menu_cl");
+
+            lista.style.display = 'flex';
+            menu_cl.style.display = 'flex';
+            menu_op.style.display = 'none';
+        }
+        function menu_close() {
+            let lista = document.getElementById("nav_menu2");
+            let menu_op = document.getElementById("menu_op");
+            let menu_cl = document.getElementById("menu_cl");
+
+            lista.style.display = 'none';
+            menu_cl.style.display = 'none';
+            menu_op.style.display = 'flex';
+        }
+
+        let btn = document.getElementById("open_modal");
+        let btn2 = document.getElementById("open_modal2");
+        let modal = document.getElementById("modal");
+        let span = document.getElementsByClassName("close")[0];
 
         btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        btn2.onclick = function () {
             modal.style.display = "block";
         }
 
