@@ -113,7 +113,7 @@ nav {
 
 @media (max-width: 600px) {
     header {
-        height: 25vh;
+        height: 20vh;
     }
 
     .title {
@@ -126,7 +126,7 @@ nav {
     }
 
     .section_gal {
-        height: 75vh;
+        height: 80vh;
     }
 
     .who_cont,
