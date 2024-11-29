@@ -92,6 +92,18 @@ nav {
 .nav_menu_list:hover {
     animation: ani 2s;
 }
+.wsp_menu2{
+    display:none;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #ffffff83;
+    color: rgb(47, 205, 55);
+}
+.wsp_menu2:hover {
+    color: white;
+    background-color: rgb(47, 205, 55);
+}
 
 @keyframes ani {
     0% {
@@ -108,37 +120,6 @@ nav {
         border: 1px solid black;
         border-radius: 20px;
         padding: 10px;
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        height: 20vh;
-    }
-
-    .title {
-        display: flex;
-        justify-content: center;
-    }
-
-    .wsp {
-        display: none;
-    }
-
-    .section_gal {
-        height: 80vh;
-    }
-
-    .who_cont,
-    .price_cont {
-        overflow: hidden;
-        height: 100%;
-    }
-
-    .who,
-    .price {
-        padding: 0px 0px;
-        overflow-y: auto;
     }
 }
 
@@ -195,6 +176,53 @@ nav {
 
     #menu {
         display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 20vh;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .wsp {
+        display: none;
+    }
+    .wsp_menu2{
+        display:flex;
+    }
+
+    .menu2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+    }
+    .close_i{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+    }
+
+    .section_gal {
+        height: 80vh;
+    }
+
+    .who_cont,
+    .price_cont {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .who,
+    .price {
+        padding: 0px 0px;
+        overflow-y: auto;
     }
 }
 
